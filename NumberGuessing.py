@@ -15,14 +15,14 @@ def Generate_num():
  #for score
 def score( chance_Remaining):
     key = str(chance_Remaining)
-    score_list = {
-        "0" : 0,
+    score_list = { 
         "1" : 10,
         "2" : 20,
         "3" : 30,
         "4" : 60,
         "5" : 80,
-        "6" : 100,
+        "6" : 90,
+        "7" : 100
     }
     if key in score_list:
             print("Your score is ", score_list[key])
@@ -53,7 +53,7 @@ def The_Game():
 
     if chance == 0:
         print("Game Over!! You guess it wrong")
-        chance -= 1
+    
     score( chance )
 
     #for play again
