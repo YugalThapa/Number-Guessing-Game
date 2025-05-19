@@ -41,11 +41,15 @@ def The_Game():
         if guessNum != number:
             chance -= 1
             if number > guessNum and chance >= 1:
-                
-                print(f"Guess higher number! {chance} chance remaining")
+                if  number - guessNum <= 10:
+                    print(f"Guess little higher number! {chance} chance remaining")
+                else:
+                    print(f"Guess higher number! {chance} chance remaining")
             elif number < guessNum and chance >= 1:
-                
-                print(f"Guess lower number! {chance} chance remaining")
+                if guessNum - number <= 10:
+                    print(f"Guess little lower number! {chance} chance remaining")
+                else:
+                    print(f"Guess lower number! {chance} chance remaining")
             
         elif guessNum == number:
             print("Congaratulation!! Your guess is right.")
